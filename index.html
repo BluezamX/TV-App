@@ -2,23 +2,28 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>TV App</title>
+    <title>TV App v0.04</title>
     <!-- Add some CSS to change client UI -->
     <style>
         body {
             background-color: #232F3E;
+            margin-left: 40px;
             }
+        h1 {
+            color: #0088DD;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 32px;
+            margin-left: 20px;
+        }
         label, button {
             color: #0077CC;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 20px;
-            margin-left: 40px;
             }
         input {
             color: #232F3E;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 20px;
-            margin-left: 20px;
             }
     </style>
     <script>
@@ -46,16 +51,34 @@
     </script>
 </head>
 <body>
+    <h1>TV App v0.04</h1>
     <form>
-        <label>User :</label>
-        <input type="text" id="user">
-        <br/>
-        <label>FolderType :</label>
-        <input type="text" id="folderType">
-        <br/>
-        <label>Name :</label>
-        <input type="text" id="name">
-        <br/>
+        <table>
+            <tr>
+                <td>
+                    <label>User</label>
+                </td>
+                <td>
+                    <input type="text" id="user">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>FolderType</label>
+                </td>
+                <td>
+                    <input type="text" id="folderType">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Name</label>
+                </td>
+                <td>
+                    <input type="text" id="name">
+                </td>
+            </tr>
+        </table>
         <!-- set button onClick method to call function we defined passing input values as parameters -->
         <button type="button" onclick="callAPI(
                 document.getElementById('user').value,
